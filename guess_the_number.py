@@ -8,8 +8,12 @@ too_high = 'too high'
 
 
 def configure_range():
+
+    lowNumber = int(input("lowest number possible "))
+    highNumber = int(input("highest number possible "))
+
     '''Set the high and low values for the random number'''
-    return 1, 10
+    return lowNumber, highNumber
 
 
 def generate_secret(low, high):
@@ -39,7 +43,7 @@ def check_guess(guess, secret):
 def main():
 
     (low, high) = configure_range()
-    secret = generate_secret(low, high)
+    secret = generate_secret(1, 30)
     counts = 0
 
     question = input('Wanna play a game (Enter any character to play): ')
