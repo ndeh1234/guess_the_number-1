@@ -42,20 +42,17 @@ def main():
     secret = generate_secret(low, high)
     counts = 0
 
-    while True:
+    question = input('Wanna play a game (Enter any character to play): ')
+    while question:
         guess = get_guess()
         result = check_guess(guess, secret)
         counts += 1
         print('You tried ' + result)
 
-
-
-
         if result == correct:
-
             print(counts)
-
-            break
+            question = input('Wanna play a again (Enter any character to play): ')
+            
 
 
 if __name__ == '__main__':
